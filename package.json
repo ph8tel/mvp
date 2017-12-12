@@ -5,11 +5,15 @@
   "main": "client/app.js",
   "dependencies": {
     "live-server": "^1.2.0",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^4.13.7",
     "nodemon": "^1.12.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dbStart": "mongod --dbpath=data",
+    "serverStart": "node server/server.js"
   },
   "author": "Joe Jackson",
   "license": "ISC"

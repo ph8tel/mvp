@@ -39,8 +39,8 @@ let save = (translationObject, callback) => {
 
 
 }
-module.exports.getRepos = function(callback, limit){
-  Repo.find(callback).limit(limit);
+module.exports.getLanguage = function(callback, limit){
+  Language.find(callback).limit(limit);
 }
 module.exports.save = save;
 module.exports.Language = Language;
