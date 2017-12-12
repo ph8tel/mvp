@@ -11,47 +11,41 @@ var requestHandler = function (req, res) {
   if ( req.method = 'GET' && ( req.url ==='/' || req.url === '/index.html') ) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../index.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/alaska.html') {
+    fs.createReadStream("../html/index.html").pipe(res);
+  } else if (req.method = 'GET' && req.url === '/alaska') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../alaska.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/merica.html') {
+    fs.createReadStream("../html/alaska.html").pipe(res);
+  } else if (req.method = 'GET' && req.url === '/merica') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../merica.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/merica.html' ) {
+    fs.createReadStream("../html/merica.html").pipe(res);
+  } else if (req.method = 'GET' && req.url === '/mexico' ) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../merica.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/mexico.html' ) {
+    fs.createReadStream("../html/mexico.html").pipe(res);
+  } else if (req.method = 'GET' && req.url === '/canadaEast') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../mexico.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/canadaEast.html') {
-    console.log('RAN with qubecqua', req.url);
-
+    fs.createReadStream("../html/canadaEast.html").pipe(res);
+  } else if (req.method = 'GET' && req.url === '/canadaWest') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../canadaEast.html").pipe(res);
-  } else if (req.method = 'GET' && req.url === '/canadaWest.html') {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../canadaWest.html").pipe(res);
+    fs.createReadStream("../html/canadaWest.html").pipe(res);
   }
   //begin search requsts
     else if (req.method = 'GET' && req.url === '/search?searchFor=mexico') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../mexico.html").pipe(res);
+    fs.createReadStream("../html/mexico.html").pipe(res);
   } else if (req.method = 'GET' && req.url === '/search?searchFor=america') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../merica.html").pipe(res);
+    fs.createReadStream("../html/merica.html").pipe(res);
   } else if (req.method = 'GET' && req.url === '/search?searchFor=alaska') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../alaska.html").pipe(res);
+    fs.createReadStream("../html/alaska.html").pipe(res);
   } else if (req.method = 'GET' && req.url === '/search?searchFor=canada') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
@@ -59,7 +53,7 @@ var requestHandler = function (req, res) {
   } else if (req.method = 'GET' && req.url === '/search?searchFor=quebec') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
-    fs.createReadStream("../merica.html").pipe(res);
+    fs.createReadStream("../html/merica.html").pipe(res);
   }
   //begin image requests
     else if (req.method = 'GET' && req.url === '/images/01Alaska.gif') {
