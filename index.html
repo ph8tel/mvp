@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>world-map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+</head>
+<!-- <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> -->
+<body margin: "auto">
+	<div id="dialog" title="Basic dialog">
+  <p>TRANSLATION SHOWS HERE</p>
+</div>
+<nav>
+	<ul>
+		<li><a href="alaska.html">alaska</a></li>
+		<li><a href="canadaWest.html">canada west</a></li>
+		<li><a href="canadaEast.html">canada east</a></li>
+		<li><a href="murica.html">murica</a></li>
+		<li><a href="murica.html">mexico</a></li>
+	</ul>
+
+<!-- begin map -->
+<table id="Table_01" width="600" height="526" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+			<a href="alaska.html"
+				onmouseover="window.status='Alaska';  return true;"
+				onmouseout="window.status='';  return true;">
+				<img src="images/01Alaska.gif" width="143" height="279" border="0" alt="Alaska"></a></td>
+		<td>
+			<a href="canadaWest.html">
+				<img src="images/1-coldAmerica.gif" width="240" height="279" border="0" alt=""></a></td>
+		<td>
+			<a href="canadaEast.html"
+				onmouseover="window.status='Frenchy Cold America';  return true;"
+				onmouseout="window.status='';  return true;">
+				<img src="images/3-coldAmericaFrenchies.gif" width="217" height="279" border="0" alt="Frenchy Cold America"></a></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<a href="merica.html"
+				onmouseover="window.status='REAL MURICA';  return true;"
+				onmouseout="window.status='';  return true;">
+				<img src="images/11murica.gif" width="600" height="127" border="0" alt="REAL MURICA"></a></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<a href="mexico.html"
+				onmouseover="window.status='Hot America';  return true;"
+				onmouseout="window.status='';  return true;">
+				<img src="images/21hotAmerica.gif" width="600" height="120" border="0" alt="Hot America"></a></td>
+	</tr>
+</table>
+<!-- End map-->
+<div class="search">
+	<h3> Search by country</h3>
+	<form action="/search">
+   Search for: <input type="text" name="searchFor"><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+<div class="addCountry">
+<form action="/action_page.php">
+	<h3>add translation</h3>
+  Language: <input type="text" name="fname"><br>
+  Translation: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
