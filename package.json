@@ -4,6 +4,7 @@
   "description": "Order a beer in any language",
   "main": "client/app.js",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
     "live-server": "^1.2.0",
     "mongodb": "^3.0.0-rc0",

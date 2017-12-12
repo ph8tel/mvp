@@ -1,0 +1,15 @@
+<% include partials/header %>
+<% include partials/nav %>
+
+<div class="search">
+  <h3> Search by country</h3>
+  <form method="POST" action="/languages/find">
+   Search for: <input type="text" name="searchFor"><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+
+<h1> <%= title%> translation <%= translation %> </h1>
+<!-- <% include partials/map %> -->
+
+<% include partials/footer %>
