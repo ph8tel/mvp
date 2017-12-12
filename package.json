@@ -1,0 +1,16 @@
+{
+  "name": "beerme",
+  "version": "1.0.0",
+  "description": "Order a beer in any language",
+  "main": "client/app.js",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "nodemon": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Jackson",
+  "license": "ISC"
+}
