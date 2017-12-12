@@ -11,3 +11,36 @@ MongoClient.connect(url, function(err, db) {
 
   db.close();
 });
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/fetcher');
+let languageSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  translation: {
+    type: String
+  },
+  hitCount: Number
+});
+
+let Language = mongoose.model('Language', languageSchema);
+
+let save = (translationObject, callback) => {
+
+  let options = {
+    name: translationObject.name,
+    translation: translationObject.translation,
+    hitCount: 1
+  };
+
+  Language.create(options);
+
+
+}
+module.exports.getRepos = function(callback, limit){
+  Repo.find(callback).limit(limit);
+}
+module.exports.save = save;
+module.exports.Language = Language;
