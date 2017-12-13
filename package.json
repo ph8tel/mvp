@@ -8,6 +8,7 @@
     "express": "^4.16.2",
     "live-server": "^1.2.0",
     "mongodb": "^3.0.0-rc0",
+    "mongojs": "^2.4.1",
     "mongoose": "^4.13.7",
     "nodemon": "^1.12.5"
   },
