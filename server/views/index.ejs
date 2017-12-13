@@ -2,21 +2,20 @@
 
 
 
-<div style="border: 1px solid black;
-    margin: 25px 400px;
-    background-color: lightblue;">
-<% include partials/nav %>
 
+<!-- <% include partials/beerSign %> -->
+
+<% include partials/nav %>
+<!-- <% include partials/talkBubble %> -->
+<% include partials/form %>
 <h1> <%= name %> translation: <%= translation %> </h1>
 
-<% include partials/beermug %>
 <% include partials/map %>
-</div>
-<div class="search">
-  <h3> Search by language</h3>
-  <form method="POST" action="/find">
-    <input type="text" name="searchFor"><br>
-  <input type="submit" value="Submit">
-</form>
-</div>
+
+<% include partials/beermug %>
+
+
+
+
+
 <% include partials/footer %>
