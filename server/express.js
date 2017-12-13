@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 
 //static files
-//app.use(express.static(path.join(__dirname, '../client' )))
+app.use(express.static(path.join(__dirname, '../client' )))
 
 //routes
 app.get('/', (req, res) => {
