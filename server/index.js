@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const PORT = process.env.PORT || 5000
 
 // orm
 var mongojs = require('mongojs')
@@ -72,7 +73,7 @@ app.get('/mexico', (req,res) => {
   });
 });
 
-
+//search form handler
 app.post('/find', (req, res) => {
   console.log(`${req.body.searchFor} was searched`);
   let translationObj = {};
